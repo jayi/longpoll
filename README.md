@@ -1,8 +1,10 @@
 # longpoll
 --
-    import "test/longpoll"
+    import "github.com/jayi/longpoll"
 
 Package longpoll 长轮询服务端实现
+
+服务端接收到查询请求时，阻塞等待，有数据更新时立即返回
 
 ## Usage
 
@@ -37,7 +39,7 @@ NewManager 新建长轮询管理实例
 ```go
 func (lpm *Manager) GetData(tag string, version string, wait ...time.Duration) (interface{}, string, error)
 ```
-GetData 根据所传tag和version获取最新数据及版本
+GetData 根据所传tag和version获取最新数据及版本 版本不是最新时，立即返回最新版本 版本是最新时，阻塞等待数据更新或超时
 
 #### func (*Manager) GetPoolData
 
