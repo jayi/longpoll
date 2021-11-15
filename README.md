@@ -85,4 +85,4 @@ PollData 长轮询实现接口
 ```go
 func NewPollData() PollData
 ```
-NewPollData 生成一个长轮询管理实例
+NewPollData 生成一个长轮询数据实例

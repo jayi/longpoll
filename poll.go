@@ -83,7 +83,7 @@ func (pd *pollDataImp) SetTimeout(timeout time.Duration) PollData {
 	return pd
 }
 
-// NewPollData 生成一个长轮询管理实例
+// NewPollData 生成一个长轮询数据实例
 func NewPollData() PollData {
 	return &pollDataImp{
 		dataDetail: &dataDetail{},
