@@ -1,6 +1,7 @@
 /*
 Package longpoll 长轮询服务端实现
 
+服务端接收到查询请求时，阻塞等待，有数据更新时立即返回
 */
 package longpoll
 
